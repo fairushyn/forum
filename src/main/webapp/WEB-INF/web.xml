@@ -1,0 +1,12 @@
+<web-app>
+    <servlet>
+	<servlet-name>main</servlet-name>
+	<servlet-class>ua.codegym.forum.servlet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+	<servlet-name>main</servlet-name>
+	<url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+</web-app>
+
