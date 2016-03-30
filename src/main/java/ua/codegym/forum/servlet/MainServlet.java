@@ -9,5 +9,4 @@ public class MainServlet extends HttpServlet {
   public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
     res.getWriter().println("Hello!");
   }
-
 }
