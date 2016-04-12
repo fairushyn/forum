@@ -1,21 +1,7 @@
 # forum
 Simple Forum implementalion.
 
-### Task
-
-We need to implement following endpoints:
-
-* ```GET /topicts``` Returns all topics in forum.
-* ```GET /topics/{topic_id}/posts``` Returns all posts for specific topic.
-* ```POST /topics``` Creates new topic.::
-
-        { "title" : "String", "text" : "String"	}
-
-* ```POST /topics/{topic_id}/posts``` Creates new post for spesific topic.::
-
-        { "text" : "String" }
-
-### First Web Application with Servlets
+### 1. First Web Application with Servlets
 Створюємо наступну ієрархію директорій.
 
 ```
@@ -98,3 +84,46 @@ public class MainServlet extends HttpServlet {
 
 Отримуємо ```target/forum-1.0-SNAPSHOT.war``` файл, який переносимо в папку томката ```tomcat/webapp/```, запускаємо сервлет контейнер.
 Перевіряємо результат в браузері!
+
+### 2. Implement endpoints on Servlets.
+
+We need to implement following endpoints:
+
+* ```GET /topicts``` Returns all topics in forum.
+* ```GET /topics/{topic_id}/posts``` Returns all posts for specific topic.
+* ```POST /topics``` Creates new topic.::
+
+        { "title" : "String", "text" : "String"	}
+
+* ```POST /topics/{topic_id}/posts``` Creates new post for spesific topic.::
+ 
+        { "text" : "String" }
+
+* ```PUT /topics/{topic_id}/posts/{postId}```
+* ```GET /topics/{topic_id}/posts```
+
+### 3. Store everything in DB using JDBC.
+
+* Create ``shema.sql`` for TOPICS and POSTS tables.
+
+### 4. Refactoring.
+
+* Export JDBC-related code into separate library.
+* Export Servlet-related code into MVC library.
+* Export business logic into Services.
+
+### 5. Security.
+
+* Create User entity.
+* Store/Track cookies.
+* Add SignIn/SignUp page.
+* Secure endpoints.
+
+### 6. Deployment
+
+* Create account on Amazon Web Services.
+* Create micro instance.
+* Download ssh keys.
+* Configure environment.
+* Spin up application.
+
